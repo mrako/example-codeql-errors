@@ -1,6 +1,6 @@
 # Example: CodeQL Errors
 
-This is a repository displaying alerts and errors found by GitHub [Dependabot](https://github.com/dependabot) and [CodeQL](https://codeql.github.com/).
+This is a repository displaying alerts and errors found by GitHub [Security](https://github.com/features/security) and [CodeQL](https://codeql.github.com/).
 
 See the live alerts:
 
