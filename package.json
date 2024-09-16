@@ -19,7 +19,7 @@
   "dependencies": {
     "@babel/traverse": "^7.23.0",
     "braces": "^3.0.2",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "ip": "^2.0.0",
     "mysql": "^2.18.1"
   }
