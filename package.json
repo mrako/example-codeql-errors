@@ -21,6 +21,7 @@
     "braces": "^3.0.2",
     "express": "^4.19.2",
     "ip": "^2.0.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "express-rate-limit": "^7.4.1"
   }
 }

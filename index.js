@@ -1,5 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
+const RateLimit = require('express-rate-limit');
 const app = express();
 
 // Assume we have a MySQL database connection
@@ -10,7 +11,13 @@ const connection = mysql.createConnection({
   database: 'test_db'
 });
 
-app.get('/user', (req, res) => {
+// set up rate limiter: maximum of 100 requests per 15 minutes
+const limiter = RateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per windowMs
+});
+
+app.get('/user', limiter, (req, res) => {
   const userId = req.query.id;
 
   // Vulnerable: Using user input directly in the SQL query
